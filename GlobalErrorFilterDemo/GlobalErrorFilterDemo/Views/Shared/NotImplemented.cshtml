@@ -1,0 +1,15 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    ViewBag.Title = "Not Implemented Error";
+}
+
+<h2>Not Implemented</h2>
+
+
+@if (Model != null)
+{
+    <p>@Model.Exception.GetType().Name<br />
+    thrown in @Model.ControllerName @Model.ActionName</p>
+    <p>Error Details:</p>
+    <p>@Model.Exception.Message</p>
+}
